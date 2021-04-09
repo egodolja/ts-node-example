@@ -19,7 +19,7 @@ const main = () => {
         hairColor
     };
 
-    console.log(`${steve.name} from ${steve.location.state} is ${steve.age} years old.`);
+    console.log(`${steve.name} is ${steve.age} years old. He lives at ${steve.location.street} in ${steve.location.city}, ${steve.location.state}.`);
 }
 
 main();
