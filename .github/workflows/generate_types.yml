@@ -17,11 +17,12 @@ jobs:
       run: yarn build:types
 
     - name: Get diff
+      id: git-diff
       run: |
         echo '::set-output name=GIT_DIFF::$(git diff --name-only | grep shared-types/index.d.ts)'
 
     - name: Conditional
-      if: steps.git-diff.outputs.diff
+      if: steps.git-diff.outputs.GIT_DIFF
       run: |
-        echo 'found diff: ${env.GIT_DIFF}'
+        echo "diff is ${{ steps.git-diff.outputs.GIT_DIFF }}"
 
