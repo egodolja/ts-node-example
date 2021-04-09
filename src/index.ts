@@ -8,12 +8,14 @@ const main = () => {
         city: 'Arlington',
         state: 'VA'
     }
+    const height = 78;
 
     const steve: Person ={
         name,
         age,
         location,
-        hairColor
+        hairColor,
+        height
     };
 
     console.log(`${steve.name} is ${steve.age} years old.`);

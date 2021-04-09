@@ -11,7 +11,7 @@ declare module "types/Person" {
         age: number;
         location: Address;
         hairColor: String;
-        height?: number;
+        height: number;
     }
 }
 declare module "types/index" {
