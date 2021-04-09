@@ -1,0 +1,9 @@
+{
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+      "module": "commonjs",
+      "declaration": true,  // generate declaration files when compiling ts project
+      "emitDeclarationOnly": true,  // generate declaration files only
+      "outFile": "./shared-types/index.d.ts", // place complied code into this file
+    }
+}
