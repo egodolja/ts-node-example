@@ -6,7 +6,8 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "build": "tsc",
-    "build:types": "tsc -p tsconfig.declaration.json"
+    "build:types": "tsc -p tsconfig.declaration.json",
+    "postinstall": "git config core.hooksPath ./git-hooks"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,17 @@
   "devDependencies": {
     "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "eslint --fix 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
+      "prettier --write"
+    ]
+  },
+  "generate-types": {
+    "": [
+      "yarn build:types",
+      "git add shared-types/index.d.ts"
+    ]
   }
 }
