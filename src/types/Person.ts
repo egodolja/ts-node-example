@@ -3,5 +3,4 @@ export interface Person {
     age: number,
     location: String,
     hairColor: String,
-    height?: number,
 }
