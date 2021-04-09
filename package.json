@@ -6,7 +6,8 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "build": "tsc",
-    "build:types": "tsc -p tsconfig.declaration.json"
+    "build:types": "tsc -p tsconfig.declaration.json",
+    "postinstall": "git config core.hooksPath ./git-hooks"
   },
   "repository": {
     "type": "git",
