@@ -1,4 +1,4 @@
 #!/bin/sh
-echo "Starting pre-commit hook..."
+
 yarn build:types
 git add shared-types/index.d.ts
