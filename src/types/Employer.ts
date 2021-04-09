@@ -1,3 +1,5 @@
+import { Address } from '.';
 export interface Employer {
-    name: String
+    name: String,
+    location: Address;
 }

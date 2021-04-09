@@ -17,8 +17,10 @@ declare module "types/Person" {
     }
 }
 declare module "types/Employer" {
+    import { Address } from "types/index";
     export interface Employer {
         name: String;
+        location: Address;
     }
 }
 declare module "types/index" {
