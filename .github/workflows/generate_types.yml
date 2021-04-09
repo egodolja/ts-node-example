@@ -14,7 +14,7 @@ jobs:
         node-version: 12.x
     
     - name: Generate types
-      run: yarn build:types && ls
+      run: yarn build:types && git diff --name-only
 
     - name: Get diff
       id: git-diff
