@@ -1,0 +1,36 @@
+name: Release Shared Types Package
+on:
+  push:
+    paths:
+    - "shared-types/*"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+      with:
+        persist-credentials: false
+
+    - name: Use Node 12
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+    
+    - name: Install dependencies
+      working-directory: ./shared-types
+      run: yarn install
+
+    - name: Setup .npmrc file
+      run: |
+        # Creates the .npmrc file necessary for publishing package
+        echo 'registry=https://npm-proxy.fury.io/egodoljaorg/' > .npmrc
+        echo '//npm-proxy.fury.io/egodoljaorg/:_authToken=${NPM_TOKEN}' >> .npmrc
+    
+    - name: Release
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      working-directory: ./shared-types
+      run: npx semantic-release
