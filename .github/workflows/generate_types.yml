@@ -18,7 +18,7 @@ jobs:
 
     - name: Get diff
       run: |
-        git diff --name-only | grep shared-types/index.d.ts'
+        git diff --name-only | grep shared-types/index.d.ts
 
     - name: Conditional
       if: steps.git-diff.outputs.diff
