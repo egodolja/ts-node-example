@@ -4,5 +4,6 @@ export interface Person {
     age: number,
     location: Address,
     hairColor: String,
-    height: number
+    height: number,
+    pronouns: String
 }
