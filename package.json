@@ -29,11 +29,5 @@
       "eslint --fix 'src/**/*.{ts,tsx}' 'test/**/*.{ts,tsx}'",
       "prettier --write"
     ]
-  },
-  "generate-types": {
-    "src": [
-      "yarn build:types",
-      "git add shared-types/index.d.ts"
-    ]
   }
 }
