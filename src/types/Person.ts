@@ -1,7 +1,8 @@
+import { Address } from './Address';
 export interface Person {
     name: String,
     age: number,
-    location: String,
+    location: Address,
     hairColor: String,
-    height?: number
+    height: number
 }

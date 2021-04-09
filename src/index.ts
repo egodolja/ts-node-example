@@ -1,19 +1,24 @@
-import { Person } from './types/Person';
+import { Person, Address } from './types';
 
 const main = () => {
     const name = 'Steve Jobs';
     const age = 35;
-    const location = 'Palo Alto';
     const hairColor = 'brown';
+    const location: Address = {
+        city: 'Arlington',
+        state: 'VA'
+    }
+    const height = 78;
 
     const steve: Person ={
         name,
         age,
         location,
-        hairColor
+        hairColor,
+        height
     };
 
-    console.log(`${steve.name} from ${steve.location} is ${steve.age} years old.`);
+    console.log(`${steve.name} is ${steve.age} years old.`);
 }
 
 main();
