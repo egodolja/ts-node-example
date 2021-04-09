@@ -22,7 +22,7 @@ jobs:
         echo '::set-output name=GIT_DIFF::$(git diff --name-only | grep shared-types/index.d.ts)'
 
     - name: Conditional
-      if: ${{ steps.git-diff.outputs.GIT_DIFF != null }} 
+      if: ${{ steps.git-diff.outputs.GIT_DIFF != '' }} 
       run: |
-        echo "diff is ${{ steps.git-diff.outputs.GIT_DIFF }}"
+        echo "diff is '${{ steps.git-diff.outputs.GIT_DIFF }}'"
 
