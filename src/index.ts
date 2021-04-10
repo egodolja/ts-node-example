@@ -1,9 +1,9 @@
-import { Person, Address } from './types';
+import { Person, Address, HairColor} from './types';
 
 const main = () => {
     const name = 'Steve Jobs';
     const age = 35;
-    const hairColor = 'brown';
+    const hairColor = HairColor.BROWN;
     const location: Address = {
         city: 'Arlington',
         state: 'VA'
