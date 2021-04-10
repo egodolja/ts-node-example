@@ -5,7 +5,7 @@ declare module "types/Address" {
     }
 }
 declare module "types/Person" {
-    import { Address, Employer } from "types/index";
+    import { Address, Employer, Hobby } from "types/index";
     export interface Person {
         name: String;
         age: number;
@@ -14,6 +14,7 @@ declare module "types/Person" {
         height: number;
         pronouns: String;
         employer?: Employer;
+        hobbies?: Hobby[];
     }
 }
 declare module "types/Employer" {
@@ -23,9 +24,16 @@ declare module "types/Employer" {
         location: Address;
     }
 }
+declare module "types/Hobby" {
+    export interface Hobby {
+        name: String;
+        preferenceLevel: number;
+    }
+}
 declare module "types/index" {
     export * from "types/Address";
     export * from "types/Person";
     export * from "types/Employer";
+    export * from "types/Hobby";
 }
 declare module "index" { }

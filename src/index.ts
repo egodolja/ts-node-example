@@ -9,7 +9,7 @@ const main = () => {
         state: 'VA'
     }
     const height = 78;
-    const pronouns = 'he/him'
+    const pronouns = 'He'
 
     const steve: Person ={
         name,
@@ -20,7 +20,7 @@ const main = () => {
         pronouns
     };
 
-    console.log(`${steve.name} is ${steve.age} years old.`);
+    console.log(`${steve.name} is ${steve.age} years old. ${steve.pronouns} lives in ${steve.location.state}`);
 }
 
 main();
