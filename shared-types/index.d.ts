@@ -10,11 +10,18 @@ declare module "types/Person" {
         name: String;
         age: number;
         location: Address;
-        hairColor: String;
+        hairColor: HairColor;
         height: number;
         pronouns: String;
         employer?: Employer;
         hobbies?: Hobby[];
+    }
+    export enum HairColor {
+        BROWN = "brown",
+        BLACK = "black",
+        BLONDE = "blonde",
+        RED = "red",
+        NONE = "none"
     }
 }
 declare module "types/Employer" {
