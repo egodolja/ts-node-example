@@ -44,3 +44,11 @@ declare module "types/index" {
     export * from "types/Hobby";
 }
 declare module "index" { }
+declare module "types/Cat" {
+    export interface Car {
+        model: String;
+        make: String;
+        year: String;
+        color: String;
+    }
+}
