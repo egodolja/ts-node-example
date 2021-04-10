@@ -3,7 +3,7 @@ import { Person, Address, HairColor} from './types';
 const main = () => {
     const name = 'Steve Jobs';
     const age = 35;
-    const hairColor = HairColor.BROWN;
+    const hairColor = HairColor.BLACK;
     const location: Address = {
         city: 'Arlington',
         state: 'VA'
