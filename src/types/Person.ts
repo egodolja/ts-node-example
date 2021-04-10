@@ -14,5 +14,6 @@ export enum HairColor {
     BROWN = "brown",
     BLACK = "black",
     BLONDE = "blonde",
+    RED = "red",
     NONE = "none"
 }

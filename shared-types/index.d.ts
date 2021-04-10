@@ -20,6 +20,7 @@ declare module "types/Person" {
         BROWN = "brown",
         BLACK = "black",
         BLONDE = "blonde",
+        RED = "red",
         NONE = "none"
     }
 }
