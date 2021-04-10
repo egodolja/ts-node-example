@@ -1,4 +1,4 @@
-import { Address, Employer } from '.';
+import { Address, Employer, Hobby } from '.';
 export interface Person {
     name: String,
     age: number,
@@ -7,4 +7,5 @@ export interface Person {
     height: number,
     pronouns: String,
     employer?: Employer;
+    hobbies?: Hobby[]
 }
