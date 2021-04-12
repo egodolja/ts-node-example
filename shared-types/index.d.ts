@@ -37,10 +37,19 @@ declare module "types/Hobby" {
         preferenceLevel: number;
     }
 }
+declare module "types/Cat" {
+    export interface Car {
+        model: String;
+        make: String;
+        year: String;
+        color: String;
+    }
+}
 declare module "types/index" {
     export * from "types/Address";
     export * from "types/Person";
     export * from "types/Employer";
     export * from "types/Hobby";
+    export * from "types/Cat";
 }
 declare module "index" { }
