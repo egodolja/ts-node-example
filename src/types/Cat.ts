@@ -3,4 +3,5 @@ export interface Car {
     make: String,
     year: String,
     color: String,
+    milage: number,
 }
