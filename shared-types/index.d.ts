@@ -43,6 +43,7 @@ declare module "types/Cat" {
         make: String;
         year: String;
         color: String;
+        milage: number;
     }
 }
 declare module "types/index" {
