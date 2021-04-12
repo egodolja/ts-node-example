@@ -1,5 +1,5 @@
 export interface Address {
-    street: String,
+    street?: String,
     city: String,
     state: String
 }
